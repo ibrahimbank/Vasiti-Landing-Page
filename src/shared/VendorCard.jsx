@@ -52,7 +52,17 @@ function VendorCard({ name, description, status, image }) {
           </Button>
         </Grid>
 
-        <Grid item>
+        <Grid
+          item
+          sx={{
+            width: "300px",
+            height: "336px",
+
+            fontSize: "16px",
+
+            color: "#474747",
+          }}
+        >
           <Typography>{description}</Typography>
         </Grid>
       </Grid>

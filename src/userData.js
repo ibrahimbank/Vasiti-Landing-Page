@@ -2,7 +2,7 @@ import show from "./assest/img-01.png";
 const UserData = [
   {
     id: 1,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-02.png"),
     name: "Joseph Ike",
     city: "ikeja",
     status: "Customer",
@@ -11,7 +11,7 @@ const UserData = [
   },
   {
     id: 2,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-04.png"),
     name: "Adetola Fashina",
     city: "ibadan",
     status: "Customer",
@@ -20,7 +20,7 @@ const UserData = [
   },
   {
     id: 3,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-06.png"),
     name: "Emmanuel Fayemi",
     city: "Akoka",
     status: "Customer",
@@ -38,7 +38,7 @@ const UserData = [
   },
   {
     id: 5,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-03.png"),
     name: " IkeAdunoluwa Adeyemi",
     city: "iwo road",
     status: "vendor",
@@ -47,7 +47,7 @@ const UserData = [
   },
   {
     id: 6,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-05.png"),
     name: "Chidi Okeke",
     city: "somolu",
     status: "vendor",

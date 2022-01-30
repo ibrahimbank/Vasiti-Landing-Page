@@ -1,7 +1,7 @@
 const VendorData = [
   {
     id: 1,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-07.png"),
     name: "Temi Obadofin",
 
     status: "vendor",
@@ -10,7 +10,7 @@ const VendorData = [
   },
   {
     id: 2,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-08.png"),
     name: "Promise Ejiofor",
 
     status: "vendor",
@@ -19,7 +19,7 @@ const VendorData = [
   },
   {
     id: 3,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-09.png"),
     name: " Feyisola Arinolahke",
 
     status: "vendor",
@@ -28,7 +28,7 @@ const VendorData = [
   },
   {
     id: 4,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-10.png"),
     name: "Karen Ibeh",
 
     status: "vendor",
@@ -37,7 +37,7 @@ const VendorData = [
   },
   {
     id: 5,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-11.png"),
     name: "Oluchi Uzo",
 
     status: "vendor",
@@ -46,7 +46,7 @@ const VendorData = [
   },
   {
     id: 6,
-    image: require("./assest/img-01.png"),
+    image: require("./assest/img-12.png"),
     name: " Amos Okafor",
 
     status: "vendor",

@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, Grid, Typography, Button } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Typography,
+  Button,
+  Input,
+  InputAdornment,
+} from "@mui/material";
 import { Twitter, Facebook, Instagram, LinkedIn } from "@mui/icons-material";
 
 import banner from "../assest/subscribe-banner.png";
@@ -44,6 +51,26 @@ function Footer() {
               We’d make sure you’re always first to know what’s happening on
               Vasiti—thus, the world.
             </p>
+          </Grid>
+
+          <Grid item>
+            <Input
+              sx={{
+                border: "1px solid #EAEAEA !important",
+                borderRadius: "8px",
+                width: "100%",
+                height: "62px",
+                padding: "2rem",
+              }}
+              className={classes.footerInput}
+              id="input"
+              placeholder="Enter your email address"
+              endAdornment={
+                <InputAdornment position="end" size="small" className="go">
+                  <Button>SUBSCRIBE</Button>
+                </InputAdornment>
+              }
+            />
           </Grid>
         </Grid>
 

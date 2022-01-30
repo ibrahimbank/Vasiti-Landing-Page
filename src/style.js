@@ -162,6 +162,8 @@ const styles = makeStyles((theme) => ({
     fontSize: "18px",
     color: "#fff",
     justifyContent: "flex-start",
+    width: "454px",
+    height: "216px",
   },
 
   headerParaThree: {
