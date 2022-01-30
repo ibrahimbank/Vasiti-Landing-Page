@@ -1,21 +1,11 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import IconButton from "@mui/material/IconButton";
 import {
   CssBaseline,
   Toolbar,
   Button,
   AppBar,
   Typography,
-  Link,
-  Box,
-  Menu,
-  MenuItem,
-  Tooltip,
-  Container,
 } from "@mui/material";
 import Logo from "../assest/logo.png";
-import ShareYourStoryBtn from "../shared/button/ShareYourStoryBtn";
 import styles from "../style";
 
 function Header() {
@@ -105,7 +95,7 @@ function Header() {
             boxSizing: " border-box",
             boxShadow: "1px 4px 4px rgba(0, 0, 0, 0.04)",
             display: { xs: "none", md: "flex" },
-            border: { xs: "none", md: "none" },
+            boxShadow: { xs: "none", md: "none" },
           }}
         >
           <Typography
