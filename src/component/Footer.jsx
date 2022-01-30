@@ -27,7 +27,7 @@ function Footer() {
       >
         <Grid
           container
-          spacing={9}
+          spacing={5}
           sx={{
             alignItems: "center",
             justifyContent: "center",
@@ -37,41 +37,56 @@ function Footer() {
             <img src={banner} alt="subscribe" />
           </Grid>
 
-          <Grid item>
-            <Typography
-              variant="h4"
-              sx={{
-                color: "#fff",
-                textAlign: "justify",
-              }}
-            >
-              Be a member of our community 🎉
-            </Typography>
-            <p className={classes.paraText}>
-              We’d make sure you’re always first to know what’s happening on
-              Vasiti—thus, the world.
-            </p>
-          </Grid>
+          <div className={classes.footerItem}>
+            <Grid item>
+              <Typography
+                variant="h4"
+                sx={{
+                  color: "#fff",
+                  justifyContent: "flex-start",
+                }}
+              >
+                Be a member of our community 🎉
+              </Typography>
+              <p className={classes.paraText}>
+                We’d make sure you’re always first to know what’s happening on
+                Vasiti—thus, the world.
+              </p>
+            </Grid>
 
-          <Grid item>
-            <Input
-              sx={{
-                border: "1px solid #EAEAEA !important",
-                borderRadius: "8px",
-                width: "100%",
-                height: "62px",
-                padding: "2rem",
-              }}
-              className={classes.footerInput}
-              id="input"
-              placeholder="Enter your email address"
-              endAdornment={
-                <InputAdornment position="end" size="small" className="go">
-                  <Button>SUBSCRIBE</Button>
-                </InputAdornment>
-              }
-            />
-          </Grid>
+            <Grid item>
+              <Input
+                sx={{
+                  borderRadius: "6px",
+                  width: "368px",
+                  height: "51px",
+                  padding: "0.5rem",
+                  background: "rgba(255, 255, 255, 0.2)",
+                  color: "#fff",
+                }}
+                className={classes.footerInput}
+                id="input"
+                placeholder="Enter your email address"
+                endAdornment={
+                  <InputAdornment position="end" size="small" className="go">
+                    <Button
+                      sx={{
+                        alignItems: "center",
+                        padding: " 8px 24px",
+                        width: "119px",
+                        height: "42px",
+                        background: "#FFFFFF",
+                        boxShadow: "1px 4px 8px rgba(239, 88, 3, 0.2)",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      SUBSCRIBE
+                    </Button>
+                  </InputAdornment>
+                }
+              />
+            </Grid>
+          </div>
         </Grid>
 
         <Grid

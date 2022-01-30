@@ -217,6 +217,11 @@ const styles = makeStyles((theme) => ({
     width: "100%",
     heigth: "50%",
   },
+
+  footerItem: {
+    display: "flex",
+    flexDirection: "column",
+  },
 }));
 
 export default styles;

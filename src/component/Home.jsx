@@ -250,6 +250,7 @@ function Home() {
                 fontStyle: "normal",
                 fontWeight: "500",
               }}
+              onClick={handleClickOpen}
             >
               Share your story!
             </Button>
