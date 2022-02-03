@@ -1,3 +1,5 @@
+This App is a single page where user come to share their stories about the vasiti services. User can also read other users story
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
