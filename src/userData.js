@@ -1,4 +1,3 @@
-import show from "./assest/img-01.png";
 const UserData = [
   {
     id: 1,

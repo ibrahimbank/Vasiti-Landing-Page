@@ -22,7 +22,12 @@ function Header() {
           color: "#242120",
         }}
       >
-        <Toolbar className={classes.nav}>
+        <Toolbar
+          className={classes.nav}
+          sx={{
+            justifyContent: { md: "space-around", xs: "flex-start" },
+          }}
+        >
           <Toolbar
             className={classes.logoContainer}
             sx={{
@@ -77,7 +82,7 @@ function Header() {
               color="warning"
               className={classes.signUpBtn}
               sx={{
-                marginLeft: "-1rem",
+                marginLeft: { md: "2rem", lg: "-1rem" },
                 fontSize: "13px",
               }}
             >
@@ -88,14 +93,20 @@ function Header() {
         <Toolbar
           className={classes.offersPages}
           sx={{
-            display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
-            border: " 1px solid rgba(0, 0, 0, 0.08)",
+            border: {
+              xs: "none",
+              md: "none",
+              lg: " 1px solid rgba(0, 0, 0, 0.08)",
+            },
             boxSizing: " border-box",
-            boxShadow: "1px 4px 4px rgba(0, 0, 0, 0.04)",
             display: { xs: "none", md: "flex" },
-            boxShadow: { xs: "none", md: "none" },
+            boxShadow: {
+              xs: "none",
+              md: "none",
+              lg: "1px 4px 4px rgba(0, 0, 0, 0.04)",
+            },
           }}
         >
           <Typography

@@ -1,6 +1,9 @@
 import { makeStyles } from "@mui/styles";
 
 const styles = makeStyles((theme) => ({
+  app: {
+    // overflow: "hidden",
+  },
   container: {
     width: "527px",
     height: "829px",
@@ -127,12 +130,10 @@ const styles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#ffff",
-    // padding: "1rem",
   },
 
   nav: {
     height: "80px",
-    // width: "1440px",
     display: "flex",
     justifyContent: "space-around",
   },
@@ -144,10 +145,6 @@ const styles = makeStyles((theme) => ({
     width: "50%",
   },
 
-  headerImg: {
-    width: "100%",
-  },
-
   headCon: {
     marginTop: "2rem",
   },
@@ -156,15 +153,16 @@ const styles = makeStyles((theme) => ({
     fontSize: "18px",
     justifyContent: "flex-start",
     color: "#494949",
+    // border: "1px solid red",
   },
 
-  headerParaTwo: {
-    fontSize: "18px",
-    color: "#fff",
-    justifyContent: "flex-start",
-    width: "454px",
-    height: "216px",
-  },
+  // headerParaTwo: {
+  //   fontSize: "18px",
+  //   color: "#fff",
+  //   justifyContent: "flex-start",
+  //   width: "454px",
+  //   height: "216px",
+  // },
 
   headerParaThree: {
     fontSize: "18px",

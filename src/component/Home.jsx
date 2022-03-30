@@ -1,4 +1,4 @@
-import { useState, Routes, Route } from "react";
+import { useState, useEffect } from "react";
 import {
   Container,
   Grid,
@@ -7,6 +7,7 @@ import {
   Typography,
   Dialog,
   DialogActions,
+  Box,
 } from "@mui/material";
 import styles from "../style";
 import Image from "../assest/imageOne.svg";
@@ -19,6 +20,21 @@ import ShareYourStoryForm from "./ShareYourStoryForm";
 import VendorCard from "../shared/VendorCard";
 
 function Home() {
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+  });
   const classes = styles();
 
   const [open, setOpen] = useState(false);
@@ -39,53 +55,84 @@ function Home() {
         className={classes.headCon}
         sx={{
           display: { xs: "flex", md: "flex" },
+          alignItems: "center",
           justifyContent: { md: "center" },
+          width: "100%",
+          overflow: "hidden",
         }}
       >
-        <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            justifyContent: { lg: "flex-start" },
+          }}
+        >
           <Grid
             item
-            xs={12}
+            xs={6}
+            sm={6}
             md={6}
+            xl={6}
             sx={{
               direcion: "column",
+              width: "100%",
+              zIndex: 2,
             }}
           >
             <Typography
               variant="h1"
               className={classes.headerText}
               sx={{
-                fontSize: "48px",
+                fontSize: { md: "48px", xs: "35px" },
                 fontFamily: "Inter",
                 fontStyle: "normal",
                 fontWeight: "bold",
                 color: "#000",
                 justifyContent: "flex-start",
-                width: "586px",
+                flexWrap: "wrap",
+                width: { md: "586px", xs: "350px", sm: "350px" },
                 height: "180px",
-                lineHeight: "60px",
+                lineHeight: { md: "60px", xs: "45px" },
+                letterSpacing: "1px",
               }}
             >
               Amazing Experiences from Our Wonderful Customers
             </Typography>
-            <p className={classes.headerPara}>
+            <Typography
+              paragraph={true}
+              className={classes.headerPara}
+              sx={{
+                width: { md: "100%", xs: "270px" },
+                marginTop: { sm: "2rem", xs: "2rem" },
+              }}
+            >
               Here is what customers and vendors are saying about us, you can
               share your stories with us too.
-            </p>
+            </Typography>
           </Grid>
 
           <Grid
             item
-            xs={6}
+            xl={12}
+            sm={6}
             md={6}
             sx={{
+              display: "flex",
               justifyContent: "center",
-              width: "100%",
+              alignItems: "center",
+              width: { lg: "477.49px", xl: "536px" },
             }}
           >
-            <img
+            <Box
+              component="img"
               src={Image}
               alt="happy customer"
+              sx={{
+                width: { xs: "100%", sm: "350px", md: "400px", lg: " 536px" },
+              }}
               className={classes.headerImg}
             />
           </Grid>
@@ -95,18 +142,34 @@ function Home() {
       <Container
         maxWidth={"xl"}
         sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           background: "#222222",
           margin: "0rem",
           spacing: "2",
-          padding: "2rem",
+          padding: { xs: "0.5rem", xl: "2rem" },
+          width: "100%",
         }}
       >
         <Grid container justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={6}>
-            <img
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              order: { xs: 2, sm: 2, lg: 1, xl: 2 },
+            }}
+          >
+            <Box
+              component="img"
               src={imageTwo}
               alt="happy customer"
               className={classes.headerImg}
+              sx={{
+                width: { xs: "478px", lg: "617px" },
+                height: "572px",
+              }}
             />
           </Grid>
 
@@ -116,20 +179,26 @@ function Home() {
             md={6}
             sx={{
               direcion: "column",
+              order: { xs: 1, sm: 1, lg: 2, xl: 1 },
             }}
           >
             <Typography
               variant="h4"
               className={classes.headerText}
               sx={{
-                fontSize: "32px",
+                fontSize: { xs: "24px", xl: "32px" },
                 fontFamily: "Inter",
                 fontStyle: "normal",
                 fontWeight: "bold",
                 color: "#fff",
+                width: { lg: "375px", xl: "375px", xs: "250px" },
+                height: { xs: "29px", xl: "39px" },
+                marginBottom: "1rem",
               }}
             >
-              Tolu & Joy’s Experience
+              {dimensions.width <= 900
+                ? "Oby’s Experience"
+                : " Tolu & Joy’s Experience"}
             </Typography>
 
             <Button
@@ -138,19 +207,30 @@ function Home() {
               sx={{
                 color: "#fff",
                 border: "1px solid#fff",
+                marginBottom: "1rem",
               }}
             >
               Customer
             </Button>
 
-            <p className={classes.headerParaTwo}>
+            <Typography
+              component="p"
+              className={classes.headerParaTwo}
+              sx={{
+                width: { sm: "402px", xl: "454px" },
+                fontSize: "18px",
+                color: "#fff",
+                justifyContent: "flex-start",
+                height: { sm: "240px", xl: "216px" },
+              }}
+            >
               I had the best experience shopping with vasiti. Usability of the
               website was great, very good customer service, an all round great
               experience. I would definately be coming back! I had the best
               experience shopping with vasiti. Usability of the website was
               great, very good customer service, an all round great experience.
               I would definately be coming back!
-            </p>
+            </Typography>
 
             <Button
               color="secondary"
@@ -170,10 +250,20 @@ function Home() {
         </Grid>
       </Container>
 
-      <Grid container spacing={5}>
+      <Grid
+        container
+        spacing={{ xs: 2, md: 3 }}
+        columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}
+        justifyContent="center"
+        alignItems="center"
+        width="100%"
+        sx={{
+          padding: "0 165px",
+        }}
+      >
         {UserData.map((user, i) => {
           return (
-            <Grid key={i} item>
+            <Grid key={i} item xs={4} sm={4} md={4} lg={4}>
               <CardUser {...user} />
             </Grid>
           );

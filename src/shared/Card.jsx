@@ -11,25 +11,34 @@ function CardUser({ name, description, status, image, city }) {
         container
         className={classes.card__container}
         sx={{
-          width: "300px",
+          width: "100%",
           height: "587px",
           padding: "1rem",
-          gap: "2rem",
-          margin: "2rem",
+          gap: "0.5rem",
+          padding: "2rem",
+          // margin: "1rem",
+          // border: "1px solid red",
         }}
       >
         <Grid item className={classes.img__div}>
           <img src={image} alt="customers" height={100} width={100} />
         </Grid>
 
-        <Grid item>
+        <Grid
+          item
+          sx={{
+            width: "100%",
+            marginBottom: "-14px",
+          }}
+        >
           <h4>{name}</h4>
         </Grid>
 
         <Grid
           item
           sx={{
-            spacing: 3,
+            spacing: 5,
+            marginBottom: "31px",
           }}
         >
           <span className={classes.span}>in {city}</span>

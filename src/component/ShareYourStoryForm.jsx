@@ -178,7 +178,6 @@ function ShareYourStoryForm({ onClick }) {
                   control={<Radio />}
                   className={classes.customersFormControlLabel}
                   value="customers"
-                  control={<Radio />}
                   label={
                     <Typography
                       variant="body2"

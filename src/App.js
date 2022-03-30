@@ -1,13 +1,13 @@
 import "./App.css";
+import styles from "./style";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
 import Home from "./component/Home";
-import ShareYourStoryForm from "./component/ShareYourStoryForm";
-import Success from "./component/Success";
 
 function App() {
+  const classes = styles();
   return (
-    <div className="App">
+    <div className={classes.app}>
       <Header />
       <Home />
       <Footer />
