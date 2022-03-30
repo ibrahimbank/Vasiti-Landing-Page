@@ -148,8 +148,9 @@ function Home() {
           background: "#222222",
           margin: "0rem",
           spacing: "2",
-          padding: { xs: "0.5rem", xl: "2rem" },
+          padding: { xs: "104px 0.5rem", xl: "2rem" },
           width: "100%",
+          marginBottom: "70px",
         }}
       >
         <Grid container justifyContent="center" alignItems="center">
@@ -258,7 +259,7 @@ function Home() {
         alignItems="center"
         width="100%"
         sx={{
-          padding: "0 165px",
+          padding: { lg: "0 165px", xs: "0 40px" },
         }}
       >
         {UserData.map((user, i) => {
@@ -270,96 +271,131 @@ function Home() {
         })}
       </Grid>
 
-      <Container
-        maxWidth={"xl"}
+      <Grid
+        container
+        spacing={1}
+        justifyContent="center"
+        alignItems="center"
         sx={{
           background: " #FFF8F5",
-          margin: "0rem",
-          spacing: "2",
-          padding: "2rem",
+          marginTop: "2rem",
+          marginBottom: "90px",
+          padding: { lg: "0 62px 0 130px", xs: "0 0 0 20px" },
         }}
       >
         <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          spacing={12}
+          item
+          xs={6}
+          md={6}
+          sx={{
+            direcion: "column",
+            order: { xs: 2, lg: 1 },
+          }}
         >
-          <Grid
-            item
-            xs={6}
-            md={6}
+          <Typography
+            variant="h4"
+            className={classes.headerText}
             sx={{
-              direcion: "column",
+              fontSize: "32px",
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              color: "#242120",
+              width: { xs: "337px", lg: "100%" },
             }}
           >
-            <Typography
-              variant="h4"
-              className={classes.headerText}
-              sx={{
-                fontSize: "32px",
-                fontFamily: "Inter",
-                fontStyle: "normal",
-                fontWeight: "bold",
-                color: "#242120",
-              }}
-            >
-              Josiah’s Experience
-            </Typography>
+            {dimensions <= 900
+              ? "Victoria’s Experience"
+              : "Josiah’s Experience"}
+          </Typography>
 
-            <Button
-              variant="outlined"
-              size="small"
-              sx={{
-                color: "#FF5C00",
+          <Button
+            variant="outlined"
+            size="small"
+            sx={{
+              color: "#FF5C00",
 
-                border: " 1px solid rgba(255, 92, 0, 0.4)",
-                boxSizing: "border-box",
-                borderRadius: "4px",
-              }}
-            >
-              vendor
-            </Button>
+              border: " 1px solid rgba(255, 92, 0, 0.4)",
+              boxSizing: "border-box",
+              borderRadius: "4px",
+              marginTop: "15px",
+              marginBottom: "24px",
+            }}
+          >
+            vendor
+          </Button>
 
-            <p className={classes.headerParaThree}>
-              I had the best experience shopping with vasiti. Usability of the
-              website was great, very good customer service, an all round great
-              experience. I would definately be coming back! I had the best
-              experience shopping with vasiti. Usability of the website was
-              great, very good customer service, an all round great experience.
-              I would definately be coming back!
-            </p>
+          <Typography
+            component="p"
+            className={classes.headerParaThree}
+            sx={{
+              fontSize: "18px",
+              color: "#242120",
+              width: "100%",
+              justifyContent: "flex-start",
+            }}
+          >
+            I had the best experience shopping with vasiti. Usability of the
+            website was great, very good customer service, an all round great
+            experience. I would definately be coming back! I had the best
+            experience shopping with vasiti. Usability of the website was great,
+            very good customer service, an all round great experience. I would
+            definately be coming back!
+          </Typography>
 
-            <Button
-              color="secondary"
-              sx={{
-                color: "#FF5C00",
-                borderBottom: "1px solid#FF5C00",
-                fontSize: "16px",
-                fontFamily: "Inter",
-                fontStyle: "normal",
-                fontWeight: "500",
-              }}
-              onClick={handleClickOpen}
-            >
-              Share your story!
-            </Button>
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <img
-              src={womanShoppingbagCard}
-              alt="happy customer"
-              className={classes.headerImg}
-            />
-          </Grid>
+          <Button
+            color="secondary"
+            sx={{
+              color: "#FF5C00",
+              borderBottom: "1px solid#FF5C00",
+              fontSize: "16px",
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontWeight: "500",
+            }}
+            onClick={handleClickOpen}
+          >
+            Share your story!
+          </Button>
         </Grid>
-      </Container>
 
-      <Grid container spacing={5}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            width: { xl: "622px", sm: "303px" },
+            marginTop: "98px",
+            order: { xs: 1, lg: 2 },
+            marginBottom: "3rem",
+          }}
+        >
+          <Box
+            component="img"
+            src={womanShoppingbagCard}
+            alt="happy customer"
+            className={classes.headerImg}
+            sx={{
+              width: "100%",
+            }}
+          />
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        spacing={{ xs: 2, md: 3 }}
+        columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}
+        justifyContent="center"
+        alignItems="center"
+        width="100%"
+        sx={{
+          padding: { lg: "0 165px", xs: "0 40px" },
+        }}
+      >
         {VendorData.map((user, i) => {
           return (
-            <Grid key={i} item>
+            <Grid key={i} item xs={4} sm={4} md={4} lg={4}>
               <VendorCard {...user} />
             </Grid>
           );

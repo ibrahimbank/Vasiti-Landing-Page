@@ -11,11 +11,12 @@ function VendorCard({ name, description, status, image }) {
         container
         className={classes.card__container}
         sx={{
-          width: "300px",
+          width: "100%",
           height: "587px",
           padding: "1rem",
-          gap: "2rem",
-          margin: "2rem",
+          gap: "0.5rem",
+          padding: "2rem",
+          marginTop: "-4rem",
         }}
       >
         <Grid item className={classes.img__div}>
@@ -26,6 +27,7 @@ function VendorCard({ name, description, status, image }) {
           item
           sx={{
             width: "100%",
+            marginBottom: "-3px",
           }}
         >
           <h4>{name}</h4>
@@ -34,7 +36,7 @@ function VendorCard({ name, description, status, image }) {
         <Grid
           item
           sx={{
-            spacing: 3,
+            spacing: 1,
           }}
         >
           <Button
@@ -46,6 +48,7 @@ function VendorCard({ name, description, status, image }) {
               borderRadius: "4px",
               color: " #049A01",
               border: "none",
+              marginBottom: "31px",
             }}
           >
             {status}

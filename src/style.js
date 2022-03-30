@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 const styles = makeStyles((theme) => ({
   app: {
-    // overflow: "hidden",
+    overflow: "hidden",
   },
   container: {
     width: "527px",
@@ -164,11 +164,12 @@ const styles = makeStyles((theme) => ({
   //   height: "216px",
   // },
 
-  headerParaThree: {
-    fontSize: "18px",
-    color: "#242120",
-    justifyContent: "flex-start",
-  },
+  // headerParaThree: {
+  //   fontSize: "18px",
+  //   color: "#242120",
+  //   width: "454px",
+  //   justifyContent: "flex-start",
+  // },
 
   rootCard: {
     maxWidth: 345,

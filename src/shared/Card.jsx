@@ -13,11 +13,9 @@ function CardUser({ name, description, status, image, city }) {
         sx={{
           width: "100%",
           height: "587px",
-          padding: "1rem",
           gap: "0.5rem",
           padding: "2rem",
-          // margin: "1rem",
-          // border: "1px solid red",
+          marginTop: "-4rem",
         }}
       >
         <Grid item className={classes.img__div}>
@@ -28,7 +26,7 @@ function CardUser({ name, description, status, image, city }) {
           item
           sx={{
             width: "100%",
-            marginBottom: "-14px",
+            marginBottom: "-5px",
           }}
         >
           <h4>{name}</h4>
@@ -42,25 +40,41 @@ function CardUser({ name, description, status, image, city }) {
           }}
         >
           <span className={classes.span}>in {city}</span>
-          <Button
-            variant="outlined"
-            sx={{
-              width: "95px",
-              height: "30px",
-              background: "#EEF8FF",
-              borderRadius: "4px",
-              color: " #0D019A",
-              border: "none",
-            }}
-          >
-            {status}
-          </Button>
+          {status === "Customer" ? (
+            <Button
+              variant="outlined"
+              sx={{
+                width: "95px",
+                height: "30px",
+                background: "#EEF8FF",
+                borderRadius: "4px",
+                color: " #0D019A",
+                border: "none",
+              }}
+            >
+              {status}
+            </Button>
+          ) : (
+            <Button
+              variant="outlined"
+              sx={{
+                width: "95px",
+                height: "30px",
+                background: "#F0FFEE",
+                borderRadius: "4px",
+                color: "#049A01",
+                border: "none",
+              }}
+            >
+              {status}
+            </Button>
+          )}
         </Grid>
 
         <Grid
           item
           sx={{
-            width: "300px",
+            width: "341px",
             height: "336px",
 
             fontSize: "16px",
